@@ -1,0 +1,36 @@
+# Environment secrets
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# dbt
+dbt/retailpulse/target/
+dbt/retailpulse/dbt_packages/
+dbt/retailpulse/logs/
+.dbt/
+
+# Airflow
+airflow/logs/
+airflow/plugins/__pycache__/
+
+# Data
+data/raw/
+*.csv
+!data/samples/*.csv
+
+# Docker
+*.log
+
+# OS/Editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Kafka data (if mounted locally)
+kafka-data/
+zookeeper-data/
