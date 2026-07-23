@@ -249,6 +249,17 @@ services:
       - retailpulse-net
     restart: always
 
+  event-generator:
+    build:
+      context: ./kafka/producers
+      dockerfile: Dockerfile
+    container_name: retailpulse-event-generator
+    depends_on:
+      - kafka
+    networks:
+      - retailpulse-net
+    restart: unless-stopped
+
 networks:
   retailpulse-net:
     driver: bridge
