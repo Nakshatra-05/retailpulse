@@ -4,4 +4,5 @@ USER airflow
 
 RUN pip install --no-cache-dir \
     clickhouse-connect==0.7.19 \
-    pandas==2.2.2
+    pandas==2.2.2 \
+    confluent-kafka==2.5.0
